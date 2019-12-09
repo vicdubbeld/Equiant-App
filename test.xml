@@ -1,0 +1,20 @@
+POST /webservices/gateway.asmx HTTP/1.1
+Host: api.equianttest.com
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://www.equiant.com/BillingSettings"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Credentials xmlns="http://www.equiant.com/">
+      <UserName>string</UserName>
+      <Password>string</Password>
+    </Credentials>
+  </soap:Header>
+  <soap:Body>
+    <BillingSettings xmlns="http://www.equiant.com/">
+      <AccountNumber>string</AccountNumber>
+    </BillingSettings>
+  </soap:Body>
+</soap:Envelope>
